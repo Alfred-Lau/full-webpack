@@ -7,7 +7,7 @@ const resolve = dir => {
 module.exports = {
     mode: 'development',
     entry: {
-        index: './app.js'
+        index: './src/app.ts'
     },
     output: {
         path: resolve('dist'),
@@ -31,6 +31,11 @@ module.exports = {
                 }
             },
             exclude: '/node_modules/'
+        }, {
+            test: /\.tsx?$/,
+            use: {
+                loader: 'ts-loader'
+            }
         }]
     }
 
