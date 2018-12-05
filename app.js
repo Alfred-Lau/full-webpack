@@ -1,14 +1,12 @@
-// es module
-import sum from './sum'
-// common js
-const {
-    minus
-} = require('./minus')
+let fun = () => {
 
-// amd  async load
-require(['./multi'], function (multi) {
-    console.log(multi(2, 3))
+}
+
+const NUM = 45
+
+let arr = [1, 2, 3]
+let arrB = arr.map((item) => {
+    return item * 2
 })
 
-console.log(sum(1, 1))
-console.log(minus(1, 1))
+console.log(arrB, new Set(arrB))
